@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokémon Memory Game</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="index.js"></script>
+</head>
+<body class="light">
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <img src="logo.webp" alt="Pokémon Memory Game" class="logo">
+      </div>
+      <div id="status">
+        <div class="stat">
+          <span class="stat-label">Clicks</span>
+          <span class="stat-value" id="clicks">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Matched</span>
+          <span class="stat-value" id="matched">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Remaining</span>
+          <span class="stat-value" id="remaining">0</span>
+        </div>
+
+        <div class="stat">
+  <span class="stat-label">Total Pairs</span>
+  <span class="stat-value" id="total">0</span>
+</div>
+        <div class="stat">
+          <span class="stat-label">Time Left</span>
+          <span class="stat-value" id="timer">--</span>
+        </div>
+      </div>
+      <div id="controls">
+        <div class="control-group">
+          <label for="difficulty">Difficulty</label>
+          <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+        <button id="startBtn" class="btn btn-primary">Start</button>
+        <button id="resetBtn" class="btn btn-secondary">Reset</button>
+        <button id="powerUpBtn" class="btn btn-power">Power Up</button>
+        <div class="control-group">
+          <label for="themeSelect">Theme</label>
+          <select id="themeSelect">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </div>
+      </div>
+      <div id="message"></div>
+    </header>
+
+    <main>
+      <div id="game_grid"></div>
+    </main>
+  </div>
+</body>
+</html>
